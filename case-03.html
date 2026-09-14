@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diseñar contra el contrato real — Daihana Mora Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./css/main.css">
+<script src="./js/theme.js"></script>
+<script src="./js/nav.js" defer></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G120TH7VQ2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-G120TH7VQ2');
+</script>
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-M9HZVGC');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9HZVGC" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="site-nav">
+  <div class="wrap">
+    <div class="nav-pill">
+      <a href="index.html" class="pill-item logo-item">
+        <span class="mark"></span><span>DM</span>
+      </a>
+      <a href="index.html#about" class="pill-item">Sobre mí</a>
+      <a href="index.html#work" class="pill-item is-active"><span class="dot"></span>Proyectos</a>
+      <a href="index.html#contact" class="pill-item">Contacto</a>
+      <button class="pill-item theme-item" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema" aria-pressed="true">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="case-shell" id="main-content">
+
+  <aside class="case-summary">
+    <a href="index.html" class="back-link">← Volver a proyectos</a>
+    <p class="eyebrow" style="margin-bottom:14px;">03 — Diseño + API + Desarrollo</p>
+    <h1>Diseñar contra el contrato real</h1>
+    <p class="lede">Leer la especificación OpenAPI como material de diseño: datos disponibles, reglas de negocio, estados y casos límite antes de la primera pantalla en alta fidelidad.</p>
+
+    <div class="meta-list">
+      <div><div class="k">Rol</div><div class="v">UX/UI · enlace con desarrollo</div></div>
+      <div><div class="k">Insumos</div><div class="v">Especificación OpenAPI · reglas de negocio</div></div>
+      <div><div class="k">Entregable</div><div class="v gold">14 estados especificados</div></div>
+    </div>
+
+    <div class="tag-row">
+      <span class="tag">carga</span>
+      <span class="tag">skeleton</span>
+      <span class="tag">vacío</span>
+      <span class="tag">primer uso</span>
+      <span class="tag">parcial</span>
+      <span class="tag">validación</span>
+      <span class="tag">conflicto</span>
+      <span class="tag">error</span>
+    </div>
+  </aside>
+
+  <div class="case-body">
+
+    <div class="case-block">
+      <span class="eyebrow">Contexto</span>
+      <p>Una funcionalidad construida por completo sobre una API existente: la interfaz solo podía mostrar, filtrar y validar lo que los endpoints devolvían de verdad.</p>
+    </div>
+
+    <div class="case-block">
+      <span class="eyebrow">Problema</span>
+      <p>Los primeros diseños asumían campos que el contrato no exponía e ignoraban respuestas que sí devolvía. Todo lo que no era el camino feliz caía en desarrollo para inventarse a mitad de sprint.</p>
+    </div>
+
+    <div class="case-block">
+      <span class="eyebrow">Objetivo</span>
+      <p>Diseñar un flujo que el contrato pueda servir y especificar cada respuesta que la persona podría recibir.</p>
+    </div>
+
+    <div class="case-block">
+      <span class="eyebrow">Proceso</span>
+      <div>
+        <p>Leí la especificación OpenAPI endpoint por endpoint, mapeé cada elemento de UI a un campo, escribí las reglas de negocio junto al flujo, listé los casos límite con desarrollo y armé un inventario de estados pegado a las pantallas, no en un documento aparte.</p>
+        <div style="padding:18px; border-radius:12px; background:var(--surface-2); border:1px solid var(--border); font-family: var(--mono); font-weight:500; font-size:12.5px; line-height:2; color:var(--muted);">
+          <div><span style="color:var(--gold);">campo</span> amount → entero, unidades menores → máscara + validación</div>
+          <div><span style="color:var(--gold);">regla</span> pago &gt; saldo → bloqueado antes de la petición</div>
+          <div><span style="color:var(--gold);">409</span> referencia duplicada → recuperación inline, no un toast</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <span class="eyebrow">Pantallas</span>
+      <div class="image-grid-2">
+        <div class="image-slot"><span class="label">Imagen: flujo-endpoints.png<br>reemplázame</span></div>
+        <div class="image-slot"><span class="label">Imagen: matriz-estados.png<br>reemplázame</span></div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <span class="eyebrow">Solución</span>
+      <div>
+        <p>Un flujo diseñado alrededor de lo que la API puede entregar, con catorce estados especificados —carga, skeleton, vacío, primer uso, datos parciales, validación, permisos, timeout, conflicto y fallo— cada uno con su copy y su vía de recuperación.</p>
+        <div class="tag-row" style="margin-top:16px;">
+          <span class="tag">carga</span>
+          <span class="tag">skeleton</span>
+          <span class="tag">vacío</span>
+          <span class="tag">primer uso</span>
+          <span class="tag">parcial</span>
+          <span class="tag" style="border-color:var(--accent); color:var(--accent);">validación</span>
+          <span class="tag" style="border-color:var(--accent); color:var(--accent);">conflicto</span>
+          <span class="tag" style="border-color:var(--gold); color:var(--gold);">error</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-block">
+      <span class="eyebrow">Impacto</span>
+      <p>Menos preguntas a mitad de sprint y ningún rediseño causado por datos inexistentes. Desarrollo revisó el flujo contra la especificación en vez de contra suposiciones.</p>
+    </div>
+
+    <div class="case-block">
+      <span class="eyebrow">Aprendizajes</span>
+      <p>Leer la especificación es trabajo de diseño. Una restricción encontrada temprano es material; encontrada tarde es retrabajo.</p>
+    </div>
+
+    <a class="next-case" href="case-lilopay.html">
+      <div>
+        <div class="label">Siguiente caso · 04</div>
+        <div class="title">Lilopay: app y landing, de extremo a extremo</div>
+      </div>
+      <span class="go">Ver →</span>
+    </a>
+
+  </div>
+</main>
+
+</body>
+</html>
