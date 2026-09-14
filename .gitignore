@@ -1,2 +1,11 @@
 prepros.config
 scss
+
+# BMAD framework (local tooling, not part of the site)
+.claude/
+_bmad/
+_bmad-output/
+
+# Design exploration / reference files (not for production)
+Prueba/
+mockup/
