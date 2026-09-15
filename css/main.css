@@ -103,6 +103,8 @@ nav.site-nav {
 nav.site-nav .wrap {
   display: flex;
   justify-content: center;
+  padding: 0;
+  max-width: 100%;
 }
 
 .nav-pill {
@@ -111,11 +113,18 @@ nav.site-nav .wrap {
   align-items: center;
   gap: 2px;
   padding: 6px;
+  max-width: 100%;
   border-radius: 999px;
   background: var(--nav-bg);
   backdrop-filter: blur(14px);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.nav-pill::-webkit-scrollbar {
+  display: none;
 }
 
 .pill-indicator {
@@ -207,6 +216,29 @@ html[data-theme=light] .pill-item.theme-item .icon-moon {
   }
   .pill-item.logo-item {
     font-size: 14px;
+    padding-left: 12px;
+  }
+}
+@media (max-width: 420px) {
+  .nav-pill {
+    gap: 0;
+  }
+  .pill-item {
+    padding: 7px 8px;
+    letter-spacing: 0.02em;
+  }
+  .pill-item.logo-item {
+    padding: 7px 8px;
+    gap: 5px;
+  }
+  .pill-item.logo-item span:not(.mark) {
+    display: none;
+  }
+  .pill-item.theme-item {
+    padding: 7px 9px;
+  }
+  .pill-item .dot {
+    display: none;
   }
 }
 header.hero {
